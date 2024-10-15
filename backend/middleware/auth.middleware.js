@@ -6,7 +6,7 @@ dotenv.config();
 
 export const protectedRoute = async (req, res, next) => {
   try {
-    const token = req.cookies("jwt-linkedin");
+    const token = req.cookies["jwt-linkedin"];
     if (!token) {
       return res
         .status(401)
